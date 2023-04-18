@@ -1,0 +1,23 @@
+.button-group {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .response-box {
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 16px;
+    transition: transform 1s ease-out;
+    min-height: 400px;
+  }
+
+  .response.animate {
+    animation: shake 1s;
+  }
+  
+  @keyframes shake {
+    0%    { opacity: 0; }
+    100%  { opacity: 1; }
+  }
+  
