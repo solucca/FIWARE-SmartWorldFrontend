@@ -1,12 +1,18 @@
 import React, { useState } from 'react';
-import logo from './assets/logo.png'
-import Api from './Api'
+import logo from './assets/logo.png';
+import Api from './Api';
 import './App.css';
+import Parking from './Components/Parking';
+import topview from './assets/TopView.png';
 
 const SmartworldContent = () => (
-  <div>
-    <h2>Smartworld Content</h2>
-    <p>This is the Smartworld content.</p>
+  <div className='smartworld-container'>
+    <img src={topview} alt='Map of the city'
+    style={{
+        maxHeight:"700px",
+        margin:0
+    }}/>
+    <Parking/>
   </div>
 );
 

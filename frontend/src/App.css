@@ -23,4 +23,8 @@
   .content-wrapper {
     padding: 20px;
   }
+
+  .smartworld-container{
+    position: relative
+  }
   
