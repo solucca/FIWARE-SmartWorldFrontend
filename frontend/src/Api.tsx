@@ -31,16 +31,16 @@ const Api: React.FC = () => {
   return (
     <div>
       <div style={{ display: 'flex'}}>
-        <button onClick={() => handleButtonClick('http://localhost:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
+        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
           Weight
         </button>
-        <button onClick={() => handleButtonClick('http://localhost:8080/v2/entities/urn:ngsi-ld:WeatherObserved:Basis:1')}>
+        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/v2/entities/urn:ngsi-ld:WeatherObserved:Basis:1')}>
           Weather
         </button>
-        <button onClick={() => handleButtonClick('http://localhost:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
+        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:2')}>
           Energy
         </button>
-        <button onClick={() => handleButtonClick('http://localhost:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
+        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:3')}>
           Parking
         </button>
       </div>

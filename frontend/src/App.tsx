@@ -9,7 +9,7 @@ const SmartworldContent = () => (
   <div className='smartworld-container'>
     <img src={topview} alt='Map of the city'
     style={{
-        maxHeight:"700px",
+        maxHeight:"950px",
         margin:0
     }}/>
     <Parking/>
@@ -66,7 +66,9 @@ const App: React.FC = () => {
           </button>
         </div>
       </nav>
-      <div className="content-wrapper">{getContent()}</div>
+      <div className="content-wrapper">
+            {getContent()}
+      </div>
     </>
   );
 };
