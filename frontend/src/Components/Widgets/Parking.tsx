@@ -1,32 +1,31 @@
 import { useState, useEffect } from "react";
-import { FaInfoCircle } from "react-icons/fa";
 import { AiOutlineClose } from "react-icons/ai";
 import "./Parking.css";
 
 type MyButtonProps = {};
 
 const getParkingSpaces = async () => {
-  const urls = [
-    "http://192.168.1.100:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1",
-    "http://192.168.1.100:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:2",
-    "http://192.168.1.100:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:3",
-    "http://192.168.1.100:8080/v2/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:4",
-  ];
-  const free = [0, 0, 0, 0];
-  let freeParkingSpotCount = 0;
-
-  for (const url in urls) {
-    try {
-      const response = await fetch(urls[url]);
-      const jsonData = await response.json();
-      if (jsonData["https://uri.etsi.org/ngsi-ld/status"].value == "free") {
-        free[url] = 1;
-      }
-    } catch (error) {
-      console.log(`My Error: ${error}`);
+  const url =
+    "http://192.168.1.100:8080/ngsi-ld/v1/entities?idPattern=.*:ParkingSpot:Mobility_Hub.*&options=keyValues";
+  var result = [0, 0, 0, 0]
+  try {
+    const response = await fetch(url);
+    const jsonData = await response.json();
+    jsonData.sort((a: {id:string}, b:{id:string})=>{
+      if (a.id[-1]>b.id[-1] ) return 1;
+      else return -1;
+    })
+    
+    for (var i = 0; i<4; i++) {
+      if (jsonData[i]["status"] == "free") 
+        result[i] = 1;
+      else
+        result[i] = 0;
     }
+  } catch (error) {
+    console.log(`My Error: ${error}`);
   }
-  return free;
+  return result;
 };
 
 const Parking = () => {
@@ -45,10 +44,12 @@ const Parking = () => {
   useEffect(() => {
     const intervalId = setInterval(async () => {
       var t = await getParkingSpaces();
-      if (t[0] != last_places[0] || 
-          t[1] != last_places[1] || 
-          t[2] != last_places[2] || 
-          t[3] != last_places[3] ){
+      if (
+        t[0] != last_places[0] ||
+        t[1] != last_places[1] ||
+        t[2] != last_places[2] ||
+        t[3] != last_places[3]
+      ) {
         handleAnimation();
         last_places = t;
       }
@@ -117,10 +118,12 @@ const Parking = () => {
             display: "grid",
           }}
         >
-          <div style={{
-            display: "flex", 
-            alignItems: "center"
-          }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+            }}
+          >
             <button
               onClick={handleClick}
               type="button"
@@ -134,12 +137,12 @@ const Parking = () => {
                 justifyContent: "center",
                 alignItems: "center",
                 marginLeft: "0px",
-                marginRight: "10px"
+                marginRight: "10px",
               }}
             >
               <AiOutlineClose color="white" size={15} />
             </button>
-            <h2 style={{margin: "0"}}>Mobility Hub</h2>
+            <h2 style={{ margin: "0" }}>Mobility Hub</h2>
           </div>
 
           {places ? (

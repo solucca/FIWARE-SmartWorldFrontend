@@ -1,19 +1,11 @@
 import React, { useState } from 'react';
 import logo from './assets/logo.png';
-import Api from './Api';
+import Api from './Components/Api';
 import './App.css';
-import Parking from './Components/Parking';
-import topview from './assets/TopView.png';
+import DigitalTwin from './Components/DigitalTwin';
 
 const SmartworldContent = () => (
-  <div className='smartworld-container'>
-    <img src={topview} alt='Map of the city'
-    style={{
-        maxHeight:"950px",
-        margin:0
-    }}/>
-    <Parking/>
-  </div>
+  <DigitalTwin/>
 );
 
 const SmartDataModelsContent = () => (
