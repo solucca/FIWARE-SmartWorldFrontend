@@ -1,0 +1,38 @@
+.wind-energy-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 70px;
+  border-radius: 10px;
+  cursor: pointer;
+  background-color: #5dc0cf;
+  color: #fff;
+  transition: all 0.5s ease;
+}
+
+.wind-energy-container.expanded {
+  width: 195px;
+  height: 120px;
+}
+
+
+.toggle-text {
+  margin-bottom: 5px;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+}
+
+.toggle-button {
+  padding: 5px 10px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #5dc0cf;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 10px;
+}

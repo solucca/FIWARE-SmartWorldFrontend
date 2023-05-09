@@ -35,7 +35,6 @@ const getChargingTime = async () => {
 
   } catch (error) {
     console.log(`My Error: ${error}`);
-    console.log(jsonData);
   }
   return result;
 };

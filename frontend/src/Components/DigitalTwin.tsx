@@ -3,6 +3,8 @@ import Parking from "./Widgets/Parking";
 import EVCharger from "./Widgets/EVCharger";
 import Harbour from "./Widgets/Harbour";
 import ProductionClass from "./Widgets/ProductionClass";
+import WindEnergy from "./Widgets/WindEnergy";
+import Weight from "./Widgets/Weight";
 
 import topview from "../assets/TopView.png"
 import AddixTemp from "./Widgets/AddixTemp";
@@ -20,7 +22,10 @@ const DigitalTwin = () => {
     <Harbour/>
     <AddixTemp/>
     <ProductionClass/>
+    <WindEnergy/>
+    <Weight/>
   </div>
+  
   )
 };
 

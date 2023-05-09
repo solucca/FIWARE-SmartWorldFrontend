@@ -31,7 +31,7 @@ const Api: React.FC = () => {
   return (
     <div>
       <div style={{ display: 'flex'}}>
-        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
+        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:weight001')}>
           Weight
         </button>
         <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:WeatherObserved:Basis:1')}>
@@ -40,7 +40,7 @@ const Api: React.FC = () => {
         <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:electricVehicleChargingStation001')}>
           Energy
         </button>
-        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:3')}>
+        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
           Parking
         </button>
       </div>

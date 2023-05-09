@@ -31,12 +31,15 @@
   @keyframes button-color {
     0% {
       scale: 1;
+      background-color: #5dc0cf;
     }
     50% {
         scale: 1.2;
+        background-color: #e65050;
     }
     100% {
         scale: 1;
+        background-color: #5dc0cf;
     }
   }
   

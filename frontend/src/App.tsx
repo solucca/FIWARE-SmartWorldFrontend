@@ -11,13 +11,16 @@ const SmartworldContent = () => (
 const SmartDataModelsContent = () => (
   <div>
     <h2>Smart Data Models Content</h2>
-    <p>This is the Smart Data Models content.</p>
+    <iframe 
+      height="1000"
+      width="500"
+      src="http://192.168.1.100:3003/d-solo/xEMwKk-Vk/legomodel?orgId=1&refresh=5s&theme=light&panelId=14">
+    </iframe>
   </div>
 );
 
 const APIContent = () => (
   <div>
-    <h2>API Content</h2>
     <Api/>
   </div>
 );
