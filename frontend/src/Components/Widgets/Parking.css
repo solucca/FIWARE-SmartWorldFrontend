@@ -2,19 +2,6 @@
     background-color: #5dc0cf;
 }
 
-.text-label {
-    margin: 0;
-    margin-top: 10px;
-}
-
-.occupied {
-    color: #e65050
-}
-
-.free {
-    color:#08770a
-}
-
 .places-number{
     color: white;
     font-size: 25px;

@@ -74,7 +74,7 @@ const Parking = () => {
       }}
     >
       <button
-        className={isAnimating ? "indicator animated" : "indicator"}
+        className={isAnimating ? "indicator bg-blue-500 animated" : "bg-blue-500 hover:bg-blue-300  indicator"}
         style={{
           borderRadius: "50%",
           width: "50px",
@@ -107,69 +107,37 @@ const Parking = () => {
         }}
       >
         <div
-          style={{
-            border: "2px solid #5dc0cf",
-            outline: "2px solid #5dc0cf",
-            padding: "10px",
-            borderRadius: "10px",
-            backgroundColor: "#e3f9fc",
-            width: "200px",
-            display: "grid",
-          }}
+          className="grid w-40 bg-blue-500 hover:bg-blue-400 border-4 border-white p-3 rounded-xl opacity-95"
+          onClick={handleClick}
         >
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-            }}
-          >
-            <button
-              onClick={handleClick}
-              type="button"
-              className="indicator"
-              style={{
-                borderRadius: "20%",
-                width: "20px",
-                height: "20px",
-                padding: "0",
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                marginLeft: "0px",
-                marginRight: "10px",
-              }}
-            >
-              <AiOutlineClose color="white" size={15} />
-            </button>
-            <h2 style={{ margin: "0" }}>Mobility Hub</h2>
-          </div>
+          <h2 className="text-white font-bold text-xl">Mobility Hub</h2>
 
           {places ? (
-            <div>
+            <div className="opacity-100">
               <div
                 className={
-                  places[0] === 1 ? "text-label free" : "text-label occupied"
+                  places[0] === 1 ? "text-label text-green-800" : "text-label text-red-800"
                 }
               >
                 <b>ParkingSpot 1:</b> {places[0] === 1 ? "Free" : "Occupied"}
               </div>
               <div
                 className={
-                  places[1] === 1 ? "text-label free" : "text-label occupied"
+                  places[1] === 1 ? "text-label text-green-800" : "text-label text-red-800"
                 }
               >
                 <b>ParkingSpot 2:</b> {places[1] === 1 ? "Free" : "Occupied"}
               </div>
               <div
                 className={
-                  places[2] === 1 ? "text-label free" : "text-label occupied"
+                  places[2] === 1 ? "text-label text-green-800" : "text-label text-red-800"
                 }
               >
                 <b>ParkingSpot 3:</b> {places[2] === 1 ? "Free" : "Occupied"}
               </div>
               <div
                 className={
-                  places[3] === 1 ? "text-label free" : "text-label occupied"
+                  places[3] === 1 ? "text-label text-green-800" : "text-label text-red-800"
                 }
               >
                 <b>ParkingSpot 4:</b> {places[3] === 1 ? "Free" : "Occupied"}

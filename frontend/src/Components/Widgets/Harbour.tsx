@@ -70,7 +70,7 @@ const Harbour = () => {
         left: "58.8%",
       }}
     >
-      <button
+      <div
         className={isAnimating ? "indicator animated" : "indicator"}
         style={{
           borderRadius: "10px",
@@ -84,8 +84,6 @@ const Harbour = () => {
           transform: showChildren ? "scale(0)" : "scale(1)",
           zIndex: showChildren ? -1 : 1,
         }}
-        onClick={handleClick}
-        type="button"
       >
         <div style={{marginRight:"30px"}}>
           {getIcon(places[0])}
@@ -96,7 +94,7 @@ const Harbour = () => {
         <div>
           {getIcon(places[1])}
         </div>
-      </button>
+      </div>
 
       <div
         style={{

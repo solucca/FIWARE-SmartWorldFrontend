@@ -35,7 +35,7 @@ const AddixTemp = () => {
       left: "32.3%",
     }}
   >
-    <div className="container">
+    <div className="bg-blue-500 rounded p-1 text-white font-bold opacity-90">
       <p className="text">{values[0]} °C</p>
       <p className="text">{values[1]} %</p>
     </div>

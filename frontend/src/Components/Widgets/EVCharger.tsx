@@ -93,7 +93,7 @@ const EVCharger = () => {
       }}
     >
       <button
-        className={isAnimating ? "indicator animated" : "indicator"}
+        className={isAnimating ? "grid w-40 bg-blue-500 hover:bg-blue-400 border-4 border-white p-3 rounded-xl opacity-95 animated" : "grid w-40 bg-blue-500 hover:bg-blue-400 border-4 border-white p-3 rounded-xl opacity-95"}
         style={{
           borderRadius: "10px",
           width: "80px",
@@ -106,7 +106,6 @@ const EVCharger = () => {
           transform: showChildren ? "scale(0)" : "scale(1)",
           zIndex: showChildren ? -1 : 1,
         }}
-        onClick={handleClick}
       >
         <div style={{marginRight:"5px"}}>
           {getIcon(places[1])}

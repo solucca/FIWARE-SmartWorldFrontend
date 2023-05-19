@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import "./ProductionClass.css"
 
 const getWeather = async () => {
   var result = [0,0];
@@ -35,7 +34,7 @@ const ProductionClass = () => {
       left: "28.7%",
     }}
   >
-    <div className="container">
+    <div className="bg-blue-500 rounded p-1 text-white font-bold opacity-90">
       <p className="text">{values[0]} °C</p>
       <p className="text">{values[1]} %</p>
     </div>

@@ -54,17 +54,17 @@ const WindEnergy = () => {
       left: "72.9%",
     }}
     onClick={handleDivClick}
-    className={`wind-energy-container ${showToggle ? 'expanded' : ''}`}
+    className={`bg-blue-500 rounded p-2 text-white font-bold opacity-90 flex flex-col justify-center ${showToggle ? 'expanded' : ''}`}
   >
     {showToggle ? (
     <>
-      <div className="toggle-text">Toggle The Wind Turbine</div>
-      <button className="toggle-button" onClick={handleButtonClick}>{windmill ? (<>ON</>):(<>OFF</>)}</button>
+      <p className="toggle-text">Toggle The Wind Turbine</p>
+      <button className="bg-white px-2 py-1 font-bold text-blue-500" onClick={handleButtonClick}>{windmill ? (<>ON</>):(<>OFF</>)}</button>
     </>
     ) : (
     <>
-    <div>Generated: <b>{values[1]} kW</b></div>
-    <div>Consumed: <b>{values[0]} kW</b></div>
+    <p>Generated: <b>{values[1]} kW</b></p>
+    <p>Consumed: <b>{values[0]} kW</b></p>
     </>
     )}
   </div>

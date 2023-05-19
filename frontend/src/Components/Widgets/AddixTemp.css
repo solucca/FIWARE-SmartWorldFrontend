@@ -1,15 +1,3 @@
-.container {
-  background-color: #5dc0cf;
-  padding: 5px;
-  border-radius: 5px;
-  color: white;
-  font-weight: bold;
-  font-size: large;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
 .text {
   margin: 0;
   line-height: 21px;

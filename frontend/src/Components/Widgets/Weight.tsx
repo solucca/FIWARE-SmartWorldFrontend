@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "./Weight.css"
 
 const getWeight = async () => {
     var result = [0, 0];
@@ -33,7 +32,7 @@ const Weight = () => {
         top: "78.9%",
         left: "5.9%",
       }}
-      className="weight-container">
+      className="bg-blue-500 rounded p-1 text-white font-bold opacity-90">
        <p className="weight-indicator">Weight: <b>{values[0]} t</b></p>
        <p className="weight-indicator">Price: <b>{values[1]} €/h</b></p>
     </div>);
