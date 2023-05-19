@@ -49,10 +49,10 @@ const IndustryCard = () => {
   return (
     <Card decoration="left" 
           decorationColor="blue"
-          className="h-80">
+          className="h-80 margin-top-25">
 
       <Flex>
-      <Title>Addix Weather:</Title>
+      <Title>Industry 2 Weather:</Title>
       <Subtitle> {values.at(-1)?.Temperature}°C | {values.at(-1)?.Humidity}%</Subtitle>
       </Flex>
       

@@ -16,8 +16,12 @@
   .buttons {
     justify-content: start;
   }
-  button {
-    margin-left: 10px;
+
+  .navigation-buttons {
+    margin-right: 15px;
+    font-weight: bold;
+    outline-width: 5em;
+    outline-color: white;
   }
   
   .content-wrapper {

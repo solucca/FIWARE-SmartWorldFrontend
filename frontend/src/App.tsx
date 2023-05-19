@@ -50,14 +50,11 @@ const App: React.FC = () => {
           <img src={logo} alt="My Logo" className='logo' />
         </div>
         <div className="buttons">
-          <button className={activeButton === 'Smartworld' ? 'active' : ''} onClick={() => handleButtonClick('Smartworld')}>
-            Smartworld
+          <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 mr-3 ml-3 rounded" onClick={() => handleButtonClick('Smartworld')}>
+            SmartWorld
           </button>
-          <button className={activeButton === 'Smart Data Models' ? 'active' : ''} onClick={() => handleButtonClick('Smart Data Models')}>
+          <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={() => handleButtonClick('API')}>
             Smart Data Models
-          </button>
-          <button className={activeButton === 'API' ? 'active' : ''} onClick={() => handleButtonClick('API')}>
-            API
           </button>
         </div>
       </nav>

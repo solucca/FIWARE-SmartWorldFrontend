@@ -29,24 +29,24 @@ const Api: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className='pl-3 pt-3'>
       <div style={{ display: 'flex'}}>
-        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:weight001')}>
+        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-12 rounded" onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:weight001')}>
           Weight
         </button>
-        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:WeatherObserved:Basis:1')}>
+        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:WeatherObserved:Basis:1')}>
           Weather
         </button>
-        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:electricVehicleChargingStation001')}>
+        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:electricVehicleChargingStation001')}>
           Energy
         </button>
-        <button onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
+        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
           Parking
         </button>
       </div>
-      <div className={`response-box`}>
+      <div className={`response-box w-fit`}>
         {data && (
-          <pre className={`response ${showAnimation ? 'animate' : ''}`} style={{ color: '#5dc0cf', fontFamily: 'monospace' }}>
+          <pre className={`response text-orange-500 mx-6 my-3 font-mono ${showAnimation ? 'animate' : ''}`}>
             {JSON.stringify(data, null, 2)}
           </pre>
         )}
