@@ -22,11 +22,8 @@
   
   .content-wrapper {
     padding: 20px;
+    height: 100px;
     display: flex;
     flex-direction: column;
-  }
-
-  .smartworld-container{
-    position: relative
   }
   

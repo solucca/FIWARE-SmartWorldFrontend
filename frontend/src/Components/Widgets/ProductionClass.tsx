@@ -31,8 +31,8 @@ const ProductionClass = () => {
   <div
     style={{
       position: "absolute",
-      top: "68.2%",
-      left: "22.7%",
+      top: "69.7%",
+      left: "28.7%",
     }}
   >
     <div className="container">

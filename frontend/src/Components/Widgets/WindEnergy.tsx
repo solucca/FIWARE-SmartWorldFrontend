@@ -50,8 +50,8 @@ const WindEnergy = () => {
   <div
     style={{
       position: "absolute",
-      top: "52.2%",
-      left: "45.9%",
+      top: "47.2%",
+      left: "72.9%",
     }}
     onClick={handleDivClick}
     className={`wind-energy-container ${showToggle ? 'expanded' : ''}`}

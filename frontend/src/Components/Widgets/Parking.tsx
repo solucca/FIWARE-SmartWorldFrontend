@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
 import { AiOutlineClose } from "react-icons/ai";
 import "./Parking.css";
+import { Card } from "@tremor/react";
 
-type MyButtonProps = {};
 
 const getParkingSpaces = async () => {
   const url =
@@ -70,7 +70,7 @@ const Parking = () => {
       style={{
         position: "absolute",
         top: "8%",
-        left: "49.5%",
+        left: "75.5%",
       }}
     >
       <button
@@ -88,7 +88,6 @@ const Parking = () => {
           zIndex: showChildren ? -1 : 1,
         }}
         onClick={handleClick}
-        type="button"
       >
         <p className="places-number">
           {places[0] + places[1] + places[2] + places[3]}

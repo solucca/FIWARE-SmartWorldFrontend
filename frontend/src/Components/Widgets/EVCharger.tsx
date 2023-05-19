@@ -34,7 +34,7 @@ const getChargingTime = async () => {
     }
 
   } catch (error) {
-    console.log(`My Error: ${error}`);
+    //console.log(`My Error: ${error}`);
   }
   return result;
 };
@@ -88,8 +88,8 @@ const EVCharger = () => {
     <div
       style={{
         position: "absolute",
-        top: "20.4%",
-        left: "49%",
+        top: "20.3%",
+        left: "74.8%",
       }}
     >
       <button
@@ -107,7 +107,6 @@ const EVCharger = () => {
           zIndex: showChildren ? -1 : 1,
         }}
         onClick={handleClick}
-        type="button"
       >
         <div style={{marginRight:"5px"}}>
           {getIcon(places[1])}

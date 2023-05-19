@@ -32,7 +32,7 @@ const AddixTemp = () => {
     style={{
       position: "absolute",
       top: "18.5%",
-      left: "23.3%",
+      left: "32.3%",
     }}
   >
     <div className="container">

@@ -67,7 +67,7 @@ const Harbour = () => {
       style={{
         position: "absolute",
         top: "21.5%",
-        left: "38.3%",
+        left: "58.8%",
       }}
     >
       <button

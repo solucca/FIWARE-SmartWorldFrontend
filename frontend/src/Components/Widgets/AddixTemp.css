@@ -1,7 +1,6 @@
 .container {
   background-color: #5dc0cf;
-  padding-left: 4px;
-  padding-right: 4px;
+  padding: 5px;
   border-radius: 5px;
   color: white;
   font-weight: bold;
@@ -13,4 +12,5 @@
 
 .text {
   margin: 0;
+  line-height: 21px;
 }

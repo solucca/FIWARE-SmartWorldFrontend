@@ -61,9 +61,9 @@ const App: React.FC = () => {
           </button>
         </div>
       </nav>
-      <div className="content-wrapper">
-            {getContent()}
-      </div>
+
+      {getContent()}
+
     </>
   );
 };
