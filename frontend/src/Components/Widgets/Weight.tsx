@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 const getWeight = async () => {
     var result = [0, 0];
     try {
-        var response = await fetch("http://192.168.1.100:8080/ngsi-ld/v1/entities?id=urn:ngsi-ld:Device:weight001&options=keyValues");
+        var response = await fetch(ENDPOINT+"/ngsi-ld/v1/entities?id=urn:ngsi-ld:Device:weight001&options=keyValues");
         var data = await response.json();
         var weight = data[0]["weight"];
         var price = data[0]["price"];

@@ -7,7 +7,7 @@ const FREE = 0
 
 const getParkingSpaces = async () => {
   const url =
-    "http://192.168.1.100:8080/ngsi-ld/v1/entities?idPattern=.*:ParkingSpot:Harbour.*&options=keyValues";
+    ENDPOINT+"/ngsi-ld/v1/entities?idPattern=.*:ParkingSpot:Harbour.*&options=keyValues";
   var result = [FREE, FREE, FREE]
   try {
     const response = await fetch(url);
@@ -17,7 +17,7 @@ const getParkingSpaces = async () => {
       else return -1;
     });
     for (var i = 0; i<3; i++) {
-      if (jsonData[i].status == "free") 
+      if (jsonData[i].status == "free" || jsonData[i].status == "66726565") 
         result[i] = 1;
       else
         result[i] = 0;

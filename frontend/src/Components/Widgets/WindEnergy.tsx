@@ -5,8 +5,8 @@ const getPower = async () => {
   var result = [0,0];
   try 
   {
-    var req1 = await fetch("http://192.168.1.100:8080/ngsi-ld/v1/entities?id=urn:ngsi-ld:EnergyConsumer:Wind_Energy:1&options=keyValues");
-    var req2 = await fetch("http://192.168.1.100:8080/ngsi-ld/v1/entities?id=urn:ngsi-ld:GreenEnergyGenerator:Wind_Energy:1&options=keyValues");
+    var req1 = await fetch(ENDPOINT+"/ngsi-ld/v1/entities?id=urn:ngsi-ld:EnergyConsumer:Wind_Energy:1&options=keyValues");
+    var req2 = await fetch(ENDPOINT+"/ngsi-ld/v1/entities?id=urn:ngsi-ld:GreenEnergyGenerator:Wind_Energy:1&options=keyValues");
     var data1 = await req1.json();
     var data2 = await req2.json();
     var consumer = data1[0]["p"];
@@ -40,9 +40,9 @@ const WindEnergy = () => {
   const handleButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
     event.stopPropagation();
     if (windmill)
-      fetch("http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:windmills001/attrs/on", {method : "PATCH"});
+      fetch(ENDPOINT+"/ngsi-ld/v1/entities/urn:ngsi-ld:Device:windmills001/attrs/on", {method : "PATCH"});
     else 
-      fetch("http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:windmills001/attrs/off", {method : "PATCH"});
+      fetch(ENDPOINT+"/ngsi-ld/v1/entities/urn:ngsi-ld:Device:windmills001/attrs/off", {method : "PATCH"});
     setWindmill(!windmill);
   };
 

@@ -6,7 +6,7 @@ import { Card } from "@tremor/react";
 
 const getParkingSpaces = async () => {
   const url =
-    "http://192.168.1.100:8080/ngsi-ld/v1/entities?idPattern=.*:ParkingSpot:Mobility_Hub.*&options=keyValues";
+    ENDPOINT+"/ngsi-ld/v1/entities?idPattern=.*:ParkingSpot:Mobility_Hub.*&options=keyValues";
   var result = [0, 0, 0, 0]
   try {
     const response = await fetch(url);
@@ -17,7 +17,7 @@ const getParkingSpaces = async () => {
     })
     
     for (var i = 0; i<4; i++) {
-      if (jsonData[i]["status"] == "free") 
+      if (jsonData[i]["status"] == "free" || jsonData[i]["status"] == "66726565") 
         result[i] = 1;
       else
         result[i] = 0;

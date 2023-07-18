@@ -15,6 +15,7 @@ import WindEnergyCard from "./Dashboard/WindEnergyCard";
 import ParkingCard from "./Dashboard/ParkingCard";
 import CraneCard from "./Dashboard/CraneCard";
 import IndustryCard from "./Dashboard/IndustryCard";
+import Dokk1 from "./Widgets/Dokk1";
 
 const DigitalTwin = () => {
   return (
@@ -35,6 +36,7 @@ const DigitalTwin = () => {
           <ProductionClass/>
           <WindEnergy/>
           <Weight/>
+          <Dokk1/>
         </div>
         </Col>
           

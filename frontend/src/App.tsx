@@ -3,6 +3,7 @@ import logo from './assets/logo.png';
 import Api from './Components/Api';
 import './App.css';
 import DigitalTwin from './Components/DigitalTwin';
+import TrainControl from './Components/TrainControl';
 
 const SmartworldContent = () => (
   <DigitalTwin/>
@@ -38,6 +39,8 @@ const App: React.FC = () => {
         return <SmartDataModelsContent />;
       case 'API':
         return <APIContent />;
+      case 'TRAIN':
+        return <TrainControl />;
       default:
         return <SmartworldContent />;
     }
@@ -53,8 +56,11 @@ const App: React.FC = () => {
           <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 mr-3 ml-3 rounded" onClick={() => handleButtonClick('Smartworld')}>
             SmartWorld
           </button>
-          <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={() => handleButtonClick('API')}>
+          <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 mr-3 rounded" onClick={() => handleButtonClick('API')}>
             Smart Data Models
+          </button>
+          <button className="bg-blue-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded" onClick={() => handleButtonClick('TRAIN')}>
+            Train Control
           </button>
         </div>
       </nav>

@@ -16,7 +16,7 @@ const FREE = 0
 
 
 const getChargingTime = async () => {
-  const url = "http://192.168.1.100:8080/ngsi-ld/v1/entities?type=EVChargingStation&options=keyValues";
+  const url = ENDPOINT+"/ngsi-ld/v1/entities?type=EVChargingStation&options=keyValues";
   var result = [FREE, FREE]
   var jsonData;
   try {
@@ -41,18 +41,18 @@ const getChargingTime = async () => {
 
 
 const getIcon = (charge: number) => {
-  if (charge == 0) return <MdOutlineElectricCar 
+  if (charge < 10) return <MdOutlineElectricCar 
                                 color="white" size={28} style={{marginTop:"5px"}}/>
-  if (charge == 10) return <MdBattery0Bar color="white" size={28}/>
-  if (charge == 20) return  <MdBattery1Bar color="white" size={28}/>  // 000   10
-  if (charge == 30) return  <MdBattery1Bar color="white" size={28}/>  // 015   20
-  if (charge == 40) return  <MdBattery2Bar color="white" size={28}/>  // 030   30
-  if (charge == 50) return  <MdBattery3Bar color="white" size={28}/>  // 030   30
-  if (charge == 60) return  <MdBattery4Bar color="white" size={28}/>  // 050   40
-  if (charge == 70) return  <MdBattery5Bar color="white" size={28}/>  // 045   50
-  if (charge == 80) return  <MdBattery6Bar color="white" size={28}/>  // 045   50
-  if (charge == 90) return  <MdBattery6Bar color="white" size={28}/>  // 075   60
-  if (charge == 100) return <MdBatteryStd color="white" size={28}/>  // 100   100
+  if (charge <  20) return  <MdBattery0Bar color="white" size={28}/>
+  if (charge <  30) return  <MdBattery1Bar color="white" size={28}/>  // 000   10
+  if (charge <  40) return  <MdBattery1Bar color="white" size={28}/>  // 015   20
+  if (charge <  50) return  <MdBattery2Bar color="white" size={28}/>  // 030   30
+  if (charge <  60) return  <MdBattery3Bar color="white" size={28}/>  // 030   30
+  if (charge <  70) return  <MdBattery4Bar color="white" size={28}/>  // 050   40
+  if (charge <  75) return  <MdBattery5Bar color="white" size={28}/>  // 045   50
+  if (charge <  80) return  <MdBattery6Bar color="white" size={28}/>  // 045   50
+  if (charge <  90) return  <MdBattery6Bar color="white" size={28}/>  // 075   60
+  if (charge < 100) return <MdBatteryStd color="white" size={28}/>  // 100   100
 }
 
 

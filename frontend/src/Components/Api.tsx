@@ -16,6 +16,7 @@ const Api: React.FC = () => {
 
   const handleButtonClick = async (endpoint: string) => {
     try {
+      console.log(ENDPOINT);
       const response = await fetch(endpoint);
       const jsonData = await response.json();
       setData(jsonData);
@@ -31,16 +32,16 @@ const Api: React.FC = () => {
   return (
     <div className='pl-3 pt-3'>
       <div style={{ display: 'flex'}}>
-        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-12 rounded" onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:weight001')}>
+        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-12 rounded" onClick={() => handleButtonClick(ENDPOINT+'/ngsi-ld/v1/entities/urn:ngsi-ld:Device:weight001')}>
           Weight
         </button>
-        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:WeatherObserved:Basis:1')}>
+        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick(ENDPOINT+'/ngsi-ld/v1/entities/urn:ngsi-ld:WeatherObserved:Basis:1')}>
           Weather
         </button>
-        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:Device:electricVehicleChargingStation001')}>
+        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick(ENDPOINT+'/ngsi-ld/v1/entities/urn:ngsi-ld:Device:electricVehicleChargingStation001')}>
           Energy
         </button>
-        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick('http://192.168.1.100:8080/ngsi-ld/v1/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
+        <button className="bg-orange-500 hover:bg-orange-400 text-white font-bold py-2 px-4 border-b-4 border-orange-700 hover:border-orange-500 ml-3 rounded" onClick={() => handleButtonClick(ENDPOINT+'/ngsi-ld/v1/entities/urn:ngsi-ld:ParkingSpot:Mobility_Hub:1')}>
           Parking
         </button>
       </div>
