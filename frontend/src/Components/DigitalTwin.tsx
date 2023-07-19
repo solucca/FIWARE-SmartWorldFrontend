@@ -16,6 +16,7 @@ import ParkingCard from "./Dashboard/ParkingCard";
 import CraneCard from "./Dashboard/CraneCard";
 import IndustryCard from "./Dashboard/IndustryCard";
 import Dokk1 from "./Widgets/Dokk1";
+import TrainIcon from "./Widgets/TrainIcon";
 
 const DigitalTwin = () => {
   return (
@@ -29,6 +30,7 @@ const DigitalTwin = () => {
               maxHeight:"950px",
               margin:0
           }}/>
+          <TrainIcon/>
           <Parking/>
           <EVCharger/>
           <Harbour/>
